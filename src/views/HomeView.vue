@@ -33,6 +33,7 @@ onMounted(async () => {
       }),
       onLoad: () => {
         console.log("Rive animation loaded successfully");
+        animation.value.startRendering();
       },
       onError: (error) => {
         console.error("Error loading Rive animation:", error);
