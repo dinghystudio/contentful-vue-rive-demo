@@ -1,10 +1,10 @@
 # contentful-vue-rive-demo
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a tech demo showing how to load a Rive animation from Contentful and display it in a Vue app.
 
-## Recommended IDE Setup
+## Contentful Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+… add screenshot here…
 
 ## Customize configuration
 
