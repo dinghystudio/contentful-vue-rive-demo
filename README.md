@@ -4,7 +4,8 @@ This project is a tech demo showing how to load a Rive animation from Contentful
 
 ## Contentful Setup
 
-… add screenshot here…
+<img width="1071" alt="SCR-20250224-ngea" src="https://github.com/user-attachments/assets/77822880-5e01-45b6-b058-5ef8171a108d" />
+
 
 ## Customize configuration
 
