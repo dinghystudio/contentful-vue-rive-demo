@@ -8,12 +8,23 @@ const riveCanvas = ref(null);
 
 const handleRiveEvent = (riveEvent) => {
   if (riveEvent.data && riveEvent.data.name) {
-    if (riveEvent.data.name === "hover") {
-      console.log("Hover event detected");
-      riveCanvas.value.style.cursor = "pointer";
-    } else if (riveEvent.data.name === "unhover") {
-      console.log("Unhover event detected");
-      riveCanvas.value.style.cursor = "default";
+    switch (riveEvent.data.name) {
+      case "hover":
+        riveCanvas.value.style.cursor = "pointer";
+        break;
+      case "unhover":
+        riveCanvas.value.style.cursor = "default";
+        break;
+      case "click1":
+        console.log("User has clicked on first button");
+        break;
+      case "click2":
+        console.log("User has clicked on second button");
+        break;
+      case "successFinal":
+        console.log("User has completed this infographic interaction");
+        break;
+      default:
     }
   }
 };
@@ -22,7 +33,6 @@ onMounted(async () => {
   try {
     const entry = await client.getEntry("22nHSGqRvwzLgM1KNpytRG");
     const riveFileUrl = entry.fields.riveFile.fields.file.url;
-    console.log("Rive file URL:", riveFileUrl);
 
     const canvas = riveCanvas.value;
     if (!canvas) {
@@ -49,7 +59,6 @@ onMounted(async () => {
         alignment: Alignment.Center,
       }),
       onLoad: () => {
-        console.log("Rive animation loaded successfully");
 
         // Call resize function to properly scale
         animation.value.resizeDrawingSurfaceToCanvas();
